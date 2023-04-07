@@ -6,9 +6,9 @@ RSpec.describe Food do
       it 'exists and has attributes' do
 
         food_data = {
-          gtin_upc: '986986',
+          gtinUpc: '986986',
           description: 'Sweet Potatoes',
-          brand_owner: 'Potato Bois Inc.',
+          brandOwner: 'Potato Bois Inc.',
           ingredients: 'Organic Sweet Potatoes'
         }
         food = Food.new(food_data)
