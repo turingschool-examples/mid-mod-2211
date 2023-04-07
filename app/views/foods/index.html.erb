@@ -1,6 +1,12 @@
 <h1> Food Index </h1>
 
+<h2> Total Hits: <%= @count %> </h2>
 
 <% @foods.each do |food| %>
-<h1> Food: <%=food.description%>% </h1>
+<div id='food'>
+  <h2> Food: <%=food.description%></h2>
+  <p> GTIN/UPC Code: <%= food.code %> </p>
+  <p> Brand Owner: <%= food.brand_owner %> </p>
+  <p> Ingredients: <%= food.ingredients%> </p>
+</div>
 <% end %>

@@ -1,3 +1,5 @@
+require './app/poros/food.rb'
+
 class  FoodsController < ApplicationController
 
   def index
@@ -9,6 +11,6 @@ class  FoodsController < ApplicationController
     @count = json[:totalHits]
     @foods = json[:foods].map do |food_data|
       Food.new(food_data)
-    end
+    end.first(10)
   end
 end
