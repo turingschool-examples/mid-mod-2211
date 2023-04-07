@@ -10,7 +10,7 @@ RSpec.describe 'Food Index Page' do
         click_button 'Search'
 
         expect(current_path).to eq(foods_path)
-        expect(page).to have_content("10 Results")
+        expect(page).to have_content("38114 Results found, Displaying 10")
         expect(page).to have_content("GTIN/UPC code: 728229015529")
         expect(page).to have_content("Description: SWEETS MEDLEY SEL GRIS, BATATA, SWEET POTATO, PURPLE SWEET POTATO REAL VEGETABLE CHIPS, SWEETS MEDLEY")
         expect(page).to have_content("Brand Owner: The Hain Celestial Group, Inc.")

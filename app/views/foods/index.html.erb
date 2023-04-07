@@ -1,0 +1,16 @@
+<h1>Foods from Search</h1>
+
+<% if @foods.empty? %>
+  <h3>No foods found</h3>
+<% else %>
+  <h3><%= @total_hits %> Results found, Displaying 10</h3>
+  <ul>
+    <% @foods.each do |food| %>
+      <li>GTIN/UPC code: <%= food.gtin_upc %></li>
+      <li>Description: <%= food.description %></li>
+      <li>Brand Owner: <%= food.brand_owner %></li>
+      <li>Ingredients: <%= food.ingredients %></li>
+      <br><br>
+    <% end %>
+  </ul>
+<% end %>
