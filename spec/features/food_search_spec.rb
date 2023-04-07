@@ -26,7 +26,7 @@ describe "as a user" do
       save_and_open_page
       expect(page).to have_content('728229015529')
       expect(page).to have_content("SWEETS MEDLEY SEL GRIS, BATATA, SWEET POTATO, PURPLE SWEET POTATO REAL VEGETABLE CHIPS, SWEETS MEDLEY")
-      expect(page).to have_content("The Hain Celestial Group, Inc.")
+      expect(page).to have_content("THE HAIN CELESTIAL GROUP, INC.")
       expect(page).to have_content("A BLEND OF SWEET POTATOES (SWEET POTATO, PURPLE SWEET POTATO, BATATA), AVOCADO OIL, SEA SALT.")
     end
   end

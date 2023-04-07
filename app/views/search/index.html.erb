@@ -2,11 +2,13 @@
 <div id="results">
   <%n=0%>
   <%@facade.returned_foods.each do |food|%>
-    <p>Result #<%=n+=1%></p>
-    <p>GTIN/UPC code: <%=food.gtinupc%></p>
-    <p>Description: <%=food.description%></p>
-    <p>Brand Owner: <%=food.brand_owner%></p>
-    <p>Ingredients: <%=food.ingredients%></p>
+    <div id="<%=food.id%>">
+      <p>Result #<%=n+=1%></p>
+      <p>GTIN/UPC code: <%=food.gtinupc%></p>
+      <p>Description: <%=food.description%></p>
+      <p>Brand Owner: <%=food.brand_owner.upcase%></p>
+      <p>Ingredients: <%=food.ingredients%></p>
+    </div>
     <br>
   <%end%>
 </div>
