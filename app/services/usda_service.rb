@@ -1,6 +1,6 @@
 class UsdaService
   def food_search(food)
-    response = conn.get("/fdc/v1/foods/search?ingredients=#{food}")
+    response = conn.get("/fdc/v1/foods/search?ingredients=#{food}&pageSize=10")
     JSON.parse(response.body, symbolize_names: true)
   end
 
