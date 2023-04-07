@@ -1,6 +1,6 @@
 class FoodService
   def ingredient_search(ingredient)
-    get_url("/fdc/v1/foods/search?ingredients=#{ingredient}&api_key=#{ENV["FDCENTRAL_API_KEY"]}")
+    get_url("/fdc/v1/foods/search?ingredients=#{ingredient}&pageSize=10&pageNumber=1&api_key=#{ENV["FDCENTRAL_API_KEY"]}")
   end
   
   def get_url(url)

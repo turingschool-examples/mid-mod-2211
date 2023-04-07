@@ -17,10 +17,13 @@ describe "as a user" do
     end
 
     it "should show a list of TEN foods that contain the ingredient sweet potatoes" do
-      expect(page).to have_content("Result #", count: 10)
+      within "#results" do
+        expect(page).to have_content("Result #", count: 10)
+      end
     end
 
     it "for each of the foods I should see GTIN/UPC code, description, Brand Owner, and ingredients" do
+      save_and_open_page
       expect(page).to have_content('728229015529')
       expect(page).to have_content("SWEETS MEDLEY SEL GRIS, BATATA, SWEET POTATO, PURPLE SWEET POTATO REAL VEGETABLE CHIPS, SWEETS MEDLEY")
       expect(page).to have_content("The Hain Celestial Group, Inc.")

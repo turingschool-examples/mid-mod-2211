@@ -1,4 +1,5 @@
 class SearchFacade
+  attr_reader :search_query
   def initialize(params)
     @search_query = params[:q]
   end
@@ -12,5 +13,10 @@ class SearchFacade
     json[:foods].map do |food_data|
       Food.new(food_data)
     end
+  end
+
+  def number_of_returned_foods
+    json = service.ingredient_search(@search_query)
+    json[:totalHits]
   end
 end
