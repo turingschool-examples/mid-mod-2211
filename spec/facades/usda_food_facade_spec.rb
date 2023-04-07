@@ -10,6 +10,9 @@ RSpec.describe "UsdaFoodFacade" do
   it "return food by search wood" do
     all_foods = UsdaFoodFacade.new
     foods = all_foods.search_food("sweet potatoes")
-  
+    
+    expect(foods.first.brandOwner).to be_a(String)
+    expect(foods.first.ingredients).to be_a(String)
+    expect(foods.first.servingSize).to be_a(Float)
   end
 end
