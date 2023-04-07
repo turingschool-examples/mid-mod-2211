@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './app/poros/food'
 
 class FoodsController < ApplicationController

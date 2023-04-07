@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Food
   attr_reader :description,
               :brand_owner,

@@ -6,6 +6,7 @@ class FoodService
   end
 
   private
+
   def get_url(url)
     response = Faraday.get(url) do |faraday|
       faraday.headers['X-API-KEY'] = ENV['usda_key']
@@ -13,4 +14,3 @@ class FoodService
     JSON.parse(response.body, symbolize_names: true)
   end
 end
-

@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe FoodFacade do
-  let(:params) { {q: 'sweet potatoes'} }
+  let(:params) { { q: 'sweet potatoes' } }
 
   describe '#foods' do
     it 'returns an array of food objects' do

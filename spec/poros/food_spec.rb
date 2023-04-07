@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Food do
-  let(:food_data) { {description: "Cheese", gtinUpc: '12345', brandOwner: 'Taco Bell', ingredients: 'not cheese'}}
-  let(:food) {Food.new(food_data)}
+  let(:food_data) { { description: 'Cheese', gtinUpc: '12345', brandOwner: 'Taco Bell', ingredients: 'not cheese' } }
+  let(:food) { Food.new(food_data) }
 
   it 'should have details' do
     expect(food).to be_a Food
@@ -11,4 +13,4 @@ RSpec.describe Food do
     expect(food.brand_owner).to eq('Taco Bell')
     expect(food.ingredients).to eq('not cheese')
   end
-end 
+end

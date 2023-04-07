@@ -15,6 +15,4 @@ class FoodFacade
   def count
     FoodService.new.all_foods(@params[:q])[:totalHits]
   end
-
-  
 end
