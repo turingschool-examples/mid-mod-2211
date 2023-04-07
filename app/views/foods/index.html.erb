@@ -1,2 +1,8 @@
 <h1>Foods that match your search:</h1>
 
+<% @search_results.each do |result| %>
+  <%= result.gtinupc %>
+  <%= result.description %>
+  <%= result.brand_owner %>
+  <%= result.ingredients %>
+<%end%>
