@@ -1,8 +1,8 @@
 <h1> Food Index </h1>
 
-<h2> Total Hits: <%= @count %> </h2>
+<h2> Total Hits: <%= @facade.count %> </h2>
 
-<% @foods.each do |food| %>
+<% @facade.foods.each do |food| %>
 <div id='food'>
   <h2> Food: <%=food.description%></h2>
   <p> GTIN/UPC Code: <%= food.code %> </p>
