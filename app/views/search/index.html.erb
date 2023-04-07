@@ -1,0 +1,17 @@
+<h1><%=@facade.number_of_returned_foods%> total results for foods containing '<%=@facade.search_query%>'</h1>
+<p>Showing you the first 10 results.</p>
+<div id="results">
+  <%n=0%>
+  <%@facade.returned_foods.each do |food|%>
+    <div id="<%=food.id%>">
+      <p>Result #<%=n+=1%></p>
+      <p>GTIN/UPC code: <%=food.gtinupc%></p>
+      <p>Description: <%=food.description%></p>
+      <p>Brand Owner: <%=food.brand_owner.upcase%></p>
+      <p>Ingredients: <%=food.ingredients%></p>
+    </div>
+    <br>
+  <%end%>
+</div>
+
+
