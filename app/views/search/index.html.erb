@@ -1,4 +1,5 @@
-<h1><%=@facade.number_of_returned_foods%> results for foods containing '<%=@facade.search_query%>'</h1>
+<h1><%=@facade.number_of_returned_foods%> total results for foods containing '<%=@facade.search_query%>'</h1>
+<p>Showing you the first 10 results.</p>
 <div id="results">
   <%n=0%>
   <%@facade.returned_foods.each do |food|%>

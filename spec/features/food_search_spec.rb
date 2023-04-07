@@ -13,7 +13,7 @@ describe "as a user" do
     end
 
     it "I should see a total of the number of items returned by the search (sweet potatoes should find more than 30k results)" do
-      expect(page).to have_content("38114 results for foods containing 'sweet potatoes'")
+      expect(page).to have_content("38114 total results for foods containing 'sweet potatoes'")
     end
 
     it "should show a list of TEN foods that contain the ingredient sweet potatoes" do
@@ -23,7 +23,6 @@ describe "as a user" do
     end
 
     it "for each of the foods I should see GTIN/UPC code, description, Brand Owner, and ingredients" do
-      save_and_open_page
       expect(page).to have_content('728229015529')
       expect(page).to have_content("SWEETS MEDLEY SEL GRIS, BATATA, SWEET POTATO, PURPLE SWEET POTATO REAL VEGETABLE CHIPS, SWEETS MEDLEY")
       expect(page).to have_content("THE HAIN CELESTIAL GROUP, INC.")
