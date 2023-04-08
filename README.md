@@ -39,7 +39,7 @@ And for each of the foods I should see:
 - The food's GTIN/UPC code
 - The food's description
 - The food's Brand Owner
-- The food's ingredients
+q- The food's ingredients
 ```
 
 Note: You can consider every result you get from the FoodData API to be a valid result for your search even if the ingredient list for the food is empty.
